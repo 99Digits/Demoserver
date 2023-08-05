@@ -117,3 +117,20 @@ exports.deletetask=async(req,res)=>{
     res.status(404).json(err)
   }
 }
+
+exports.ServerLoader=async(req,res)=>{
+  try{
+
+    const data=await users.find()
+    if(data){
+      return res.status(200).json("ok")
+    }
+    else{
+     return res.status(401).json("not found")
+    }
+
+  }
+  catch(err){
+    return res.status(404).json(err)
+  }
+}
