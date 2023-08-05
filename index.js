@@ -14,7 +14,7 @@ server.use(express.json())
 server.use(bodyparser.json())
  server.use(router)
 
-PORT=4000 || process.env
+PORT=4100 || process.env
 server.listen(PORT,()=>{
     console.log(`server is listening to port ${PORT}`);
 })
